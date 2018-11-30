@@ -40,8 +40,15 @@ class HomePage extends Component {
             data: {
                 message: this.state.messageValue
             }
-            }
-        )
+            })
+            .then((res) => {
+                console.log(res)
+            }).catch((e) => {
+                console.log(e);
+            });
+            this.setState({
+                messageValue: '',
+            })
     }
 
     componentDidMount() {
